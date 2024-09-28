@@ -8,14 +8,17 @@ import (
 )
 
 func main() {
-	router := routes.NewRouter()
+	router, err := routes.NewRouter()
+	if err != nil {
+		panic(err)
+	}
 
 	port := 80
 	addr := fmt.Sprintf(":%d", port)
 	fmt.Printf("Server is running on http://localhost%s\n", addr)
-	err := http.ListenAndServe(addr, router)
-	if err != nil {
-		panic(err)
+	error := http.ListenAndServe(addr, router)
+	if error != nil {
+		panic(error)
 	}
 
 }

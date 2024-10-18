@@ -9,7 +9,7 @@ const cookieController = require('./controllers/cookieController.js')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const MONGO_URI = 'mongodb+srv://foodForager:9j78rgBbZ8nh7vTK@foodforager.ip0lgrq.mongodb.net/'
+const MONGO_URI = 'mongodb+srv://foodForager:kDN0uwGep8YiokUL@foodforager.ip0lgrq.mongodb.net/?retryWrites=true&w=majority&appName=FoodForager'
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', () => {
   console.log('Connected to Database');

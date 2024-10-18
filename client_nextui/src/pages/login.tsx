@@ -1,4 +1,7 @@
 import { useState, ChangeEvent, FormEvent } from "react";
+import { Link } from "@nextui-org/link";
+
+import DefaultLayout from "@/layouts/default";
 
 type LoginFormData = {
   username: string;
@@ -51,28 +54,33 @@ const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="login-container">
-      <h1>Login</h1>
-      <form onSubmit={handleLogin}>
-        <input
-          name="username"
-          placeholder="username"
-          type="text"
-          value={formData.username}
-          onChange={handleFormChange}
-        />
-        <input
-          name="password"
-          placeholder="password"
-          type="password"
-          value={formData.password}
-          onChange={handleFormChange}
-        />
-        <button className="button" type="submit">
-          Login
-        </button>
-      </form>
-    </div>
+    <DefaultLayout>
+      <div className="login-container">
+        <h1>Login</h1>
+        <form onSubmit={handleLogin}>
+          <input
+            name="username"
+            placeholder="username"
+            type="text"
+            value={formData.username}
+            onChange={handleFormChange}
+          />
+          <input
+            name="password"
+            placeholder="password"
+            type="password"
+            value={formData.password}
+            onChange={handleFormChange}
+          />
+          <button className="button" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
+      <div>
+        Don&apos;t have an account? <Link href="/register">Register</Link>
+      </div>
+    </DefaultLayout>
   );
 };
 

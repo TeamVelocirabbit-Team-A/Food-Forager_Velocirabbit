@@ -21,7 +21,7 @@ func HandleRegisterPost (w http.ResponseWriter, r *http.Request){
 		return
 	}
 
-	fmt.Println("finished decoding")
+	fmt.Printf("finished decoding with %+v\n", client)
 
 	if client.Username == "" || 
 			client.Password == "" || 

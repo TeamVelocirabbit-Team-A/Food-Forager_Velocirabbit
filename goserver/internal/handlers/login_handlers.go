@@ -24,7 +24,7 @@ func HandleLoginPost(w http.ResponseWriter, r *http.Request) {
         http.Error(w, "Missing User or Password", http.StatusBadRequest)
         return
     }
-    fmt.Println("client:", client)
+    // fmt.Println("client:", client)
 
     // Check if the user exists in the database
     user, err := db.GetUser(client.Username)
@@ -41,7 +41,9 @@ func HandleLoginPost(w http.ResponseWriter, r *http.Request) {
     }
 
     w.Header().Set("Content-Type", "application/json")
-    w.WriteHeader(http.StatusNoContent)
+    w.WriteHeader(http.StatusOK)
+    response := map[string]string{"message": "Login successful"}
+    json.NewEncoder(w).Encode(response)
 
 	fmt.Println("finished login")
 }

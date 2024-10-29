@@ -1,0 +1,13 @@
+{
+  "name": "forager",
+  "version": "1.0.0",
+  "description": "An iteration of food_forager using React, Typescript, NextUI, and Go",
+  "scripts": {
+    "install": "echo \"Error: cd into client or one of the backend servers\" && exit 1",
+    "build": "echo \"Error: cd into client or one of the backend servers\" && exit 1",
+    "dev": "echo \"Error: cd into client or one of the backend servers\" && exit 1",
+    "start": "echo \"Error: cd into client or one of the backend servers\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

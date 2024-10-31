@@ -1,17 +1,13 @@
 # Goblin-Shark-Project
 
+To run the goserver branch, run both the client and goserver branches:
 
-=========================
+## To run goserver directory
+- run 'cd goserver'
+- create a postgres connection string in your own .env file
+- run the script './cmd/main/'
 
-Mongo DB Password: '9j78rgBbZ8nh7vTK'
-
-=========================
-
-git commit -m "[Name] mm/dd/yyyy [Branch] [Messages]
-dquote>
-dquote>
-> Co-author-by: Jules <julesdmai@gmail.com>
-> Co-author-by: Stan <liger07@gmail.com>
-> Co-author-by: Alex <alexanderjosephdavid@gmail.com>
-> Co-author-by: Ricky <Roderickx.deleon@gmail.com>"
-    
+## To run client directory
+- run 'cd client'
+- install all dependencies
+- run 'npm run dev'

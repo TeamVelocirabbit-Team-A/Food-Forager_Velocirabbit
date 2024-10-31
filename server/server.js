@@ -2,15 +2,14 @@ const express = require("express");
 const axios = require("axios");
 const path = require("path");
 const mongoose = require("mongoose")
-// const bodyParser = require('body-parser');
 
 const apiController = require('./controllers/apiController.js')
 const cookieController = require('./controllers/cookieController.js')
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const MONGO_URI = 'mongodb+srv://foodForager:9j78rgBbZ8nh7vTK@foodforager.ip0lgrq.mongodb.net/'
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const MONGO_URI = 'mongodb+srv://foodForager:L0zAoLqOm1SxVzew@foodforager.ip0lgrq.mongodb.net/'
+mongoose.connect(MONGO_URI);
 mongoose.connection.once('open', () => {
   console.log('Connected to Database');
 });
@@ -19,11 +18,7 @@ mongoose.connection.once('open', () => {
 
 app.use(express.json());
 app.use(express.urlencoded());
-// Parse URL-encoded bodies (e.g., form data)
-// app.use(bodyParser.urlencoded({ extended: true }));
 
-// Parse JSON bodies
-// app.use(bodyParser.json());
 
 
 // Serve static files from the 'dist' directory

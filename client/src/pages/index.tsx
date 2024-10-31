@@ -25,7 +25,9 @@ export default function IndexPage() {
   return (
     <HeroLayout>
       {searchResults.length === 0 ? (
-        <div className="container border-2 border-red-500" />
+        <div className="container flex justify-center items-center text-m">
+          <span> Use the searchbar above to find your next meal</span>
+        </div>
       ) : (
         <div className="container flex flex-row flex-wrap justify-between gap-x-12 gap-y-4 my-8">
           {searchResults.map((result) => (

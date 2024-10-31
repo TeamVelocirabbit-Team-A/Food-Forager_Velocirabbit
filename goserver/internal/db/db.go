@@ -38,6 +38,12 @@ func Connect() error {
     return nil
 }
 
+func Close() {
+    if pool != nil {
+        pool.Close()
+    }
+}
+
 func createTable (db *pgxpool.Pool) error {
     createTableStr := `
         CREATE TABLE IF NOT EXISTS users (
